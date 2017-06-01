@@ -1,4 +1,3 @@
-//if
 
 //== equal to
 //===strict equal to
@@ -80,13 +79,13 @@ var myCar = function(car, year){
 // var fname = prompt('What is your first name?');
 // var lname = prompt('What is your last name?');
 
-function welcome(){
-  var msg = 'Welcome';
-  for(var arg of arguments){
-    msg += ' ' + arg;
-  }
-  alert(msg );
-}
+// function welcome(){
+//   var msg = 'Welcome';
+//   for(var arg of arguments){
+//     msg += ' ' + arg;
+//   }
+//   alert(msg );
+// }
 // welcome('Skye', 'Elizabeth', 'Mari', 'Potter', 'Reyes' );
 
 /*HOMEWORK
@@ -100,3 +99,18 @@ alert welcome
 
 minimum 2 functions!!!
 */
+
+function getUsername() {
+  var userFirst = prompt('Please enter your first name.').trim();
+  welcome(properCap(userFirst));
+}
+
+function properCap(uf) {
+    uf = uf.charAt(0).toUpperCase() + uf.substr(1).toLowerCase();
+    // welcome(uf);
+    return uf;
+}
+
+function welcome(uf) {
+  alert(`Welcome, ${uf}!!!`)
+}
